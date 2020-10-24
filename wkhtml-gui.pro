@@ -21,13 +21,16 @@ DEFINES += \
     "APP_VERSION=\\\"$$VERSION\\\""
 
 SOURCES += \
+    src/AboutDialog.cpp \
     src/main.cpp \
     src/MainWindow.cpp
 
 HEADERS += \
-    include/MainWindow.h
+    include/MainWindow.h \
+    src/AboutDialog.h
 
 FORMS += \
+    src/AboutDialog.ui \
     ui/MainWindow.ui
 
 TRANSLATIONS += \
