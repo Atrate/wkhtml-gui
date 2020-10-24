@@ -7,7 +7,11 @@ This is HEAVY WORK IN PROGRESS and not ready at all.
 
 ### [Changelog](./CHANGELOG)
 
-# Dependencies
+## Contributing
+
+For guidelines on how to contribute please refer to [CONTRIBUTING.md](./CONTRIBUTING.md). Please keep in mind that all pull/merge requests should be submitted to the [GitLab repo](https://gitlab.com/Atrate/wkhtml-gui), since repos on e.g. GitHub are just mirrors.
+
+## Dependencies
  - Qt 5.2 or higher
  - C++11 or higher
 
