@@ -26,14 +26,23 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <property name="documentMode">
+     <bool>true</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
     <widget class="QWidget" name="tabPdf">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>PDF</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tabImage">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Image</string>
      </attribute>
     </widget>
    </widget>
@@ -51,7 +60,7 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionEnter_custom_paths"/>
+    <addaction name="actionCustom"/>
     <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -74,9 +83,9 @@
     <string>Quit</string>
    </property>
   </action>
-  <action name="actionEnter_custom_paths">
+  <action name="actionCustom">
    <property name="text">
-    <string>Enter custom paths</string>
+    <string>Choose Custom Installation Path</string>
    </property>
   </action>
  </widget>
