@@ -27,10 +27,10 @@ SOURCES += \
 
 HEADERS += \
     include/MainWindow.h \
-    src/AboutDialog.h
+    include/AboutDialog.h
 
 FORMS += \
-    src/AboutDialog.ui \
+    ui/AboutDialog.ui \
     ui/MainWindow.ui
 
 TRANSLATIONS += \
