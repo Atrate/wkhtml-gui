@@ -1,0 +1,14 @@
+default:
+  image: vookimedlo/ubuntu-qt:latestDistroOfficial_gcc_focal
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+build:
+  script:
+    - sudo apt-get update
+    - sudo apt-get install -y --no-install-recommends qttools5-dev-tools curl libcurl3-dev
+    - mkdir build
+    - cd build
+    - qmake ..
+    - make -j4
