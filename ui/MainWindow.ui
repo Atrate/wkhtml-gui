@@ -60,7 +60,14 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionCustom"/>
+    <widget class="QMenu" name="menuChoose_Custom_Installation_Path">
+     <property name="title">
+      <string>Choose Custom Installation Path</string>
+     </property>
+     <addaction name="actionwkhtmltopdf"/>
+     <addaction name="actionwkhtmltoimage"/>
+    </widget>
+    <addaction name="menuChoose_Custom_Installation_Path"/>
     <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -83,9 +90,14 @@
     <string>Quit</string>
    </property>
   </action>
-  <action name="actionCustom">
+  <action name="actionwkhtmltopdf">
    <property name="text">
-    <string>Choose Custom Installation Path</string>
+    <string>wkhtmltopdf</string>
+   </property>
+  </action>
+  <action name="actionwkhtmltoimage">
+   <property name="text">
+    <string>wkhtmltoimage</string>
    </property>
   </action>
  </widget>

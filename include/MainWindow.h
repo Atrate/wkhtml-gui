@@ -17,8 +17,8 @@ class MainWindow : public QMainWindow
         ~MainWindow();
 
     private:
-        QString wkhtmltopdf_path;
-        QString wkhtmltoimage_path;
+        QString m_wkhtmltopdf_path;
+        QString m_wkhtmltoimage_path;
 
         Ui::MainWindow* ui;
         void window_setup();
@@ -28,7 +28,7 @@ class MainWindow : public QMainWindow
     private slots:
         void on_actionAbout_triggered();
         void on_actionQuit_triggered();
-
-
+        void on_actionwkhtmltopdf_triggered();
+        void on_actionwkhtmltoimage_triggered();
 };
 #endif // MAINWINDOW_H
