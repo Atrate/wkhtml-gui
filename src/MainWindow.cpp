@@ -1,3 +1,4 @@
+#include <QCloseEvent>
 #include <QDebug>
 #include <QFile>
 #include <QFileDialog>
@@ -15,6 +16,7 @@ MainWindow::MainWindow(QWidget* parent)
     ui->setupUi(this);
     m_wkhtmltopdf_path = find_wkhtmltopdf_path();
     m_wkhtmltoimage_path = find_wkhtmltoimage_path();
+    m_process_running = false;
     window_setup();
 }
 
@@ -100,7 +102,7 @@ void MainWindow::on_actionAbout_triggered()
     about->show();
 }
 
-void MainWindow::on_actionQuit_triggered()
+void MainWindow::on_actionQuit_triggered() const
 {
     QApplication::quit();
 }
@@ -144,5 +146,25 @@ void MainWindow::on_actionwkhtmltoimage_triggered()
 
         m_wkhtmltoimage_path = file_path;
         window_setup();
+    }
+}
+
+void MainWindow::closeEvent(QCloseEvent* event)
+{
+    if (m_process_running)
+    {
+        if (QMessageBox::Yes == QMessageBox::question(this, tr("Close Confirmation"), tr("A process is still running. Are you sure you want to exit?"),
+                QMessageBox::Yes | QMessageBox::No))
+        {
+            event->accept();
+        }
+        else
+        {
+            event->ignore();
+        }
+    }
+    else
+    {
+        event->accept();
     }
 }

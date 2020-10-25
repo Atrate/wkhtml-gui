@@ -16,7 +16,11 @@ class MainWindow : public QMainWindow
         MainWindow(QWidget* parent = nullptr);
         ~MainWindow();
 
+    protected:
+        void closeEvent(QCloseEvent* event) override;
+
     private:
+        bool m_process_running;
         QString m_wkhtmltopdf_path;
         QString m_wkhtmltoimage_path;
 
@@ -27,7 +31,7 @@ class MainWindow : public QMainWindow
 
     private slots:
         void on_actionAbout_triggered();
-        void on_actionQuit_triggered();
+        void on_actionQuit_triggered() const;
         void on_actionwkhtmltopdf_triggered();
         void on_actionwkhtmltoimage_triggered();
 };
